@@ -1,0 +1,28 @@
+# Perl
+*.bak
+*.swp
+*~
+blib/
+_build/
+MANIFEST.bak
+META.json
+META.yml
+MYMETA.json
+MYMETA.yml
+Makefile
+Makefile.old
+pm_to_blib
+
+# Editors
+.idea/
+.vscode/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local Kevin output
+engineering-distress.txt
+*.mood
+mood-cert.png
