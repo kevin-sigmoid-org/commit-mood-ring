@@ -36,8 +36,8 @@ The vendor's product is a Slack bot that pings your devs once a week:
 Your devs answer "**3**" every single week, regardless of whether they shipped a feature or just got paged at 03:00 for the seventh time. The vendor's dashboard shows your team's mood is **stable at 3/5**. The CTO is reassured. Nobody is reassured.
 
 ```mermaid
-pie title Where your "engineering sentiment data" actually comes from
-    "Devs clicking 3 to stop the bot from pinging again" : 78
+pie showData title Where your engineering sentiment data actually comes from
+    "Devs clicking 3 to stop the bot pinging again" : 78
     "Devs clicking 5 to be left alone faster" : 11
     "Devs ignoring the bot entirely" : 9
     "Actual considered feedback" : 2
@@ -138,27 +138,25 @@ Where:
 This is, statistically, **not science**. It is, however, **better than what your $50,000/year vendor is doing**.
 
 ```mermaid
-mindmap
-  root((Multilingual corpus))
-    English
-      swear words
-      asdf ugh argh
-      nope broken hate
-    Francais
-      putain merde
-      chiant naze
-      n'importe quoi
-    Deutsch
-      scheisse verdammt
-      mist kacke
-    Espanol
-      mierda joder
-    Universal
-      dread punctuation
-      wip fix asdf
-      ALL CAPS RAGE
-      please work
-      last try
+graph TB
+    R([Multilingual corpus])
+    R --> EN[English]
+    R --> FR[Francais]
+    R --> DE[Deutsch]
+    R --> ES[Espanol]
+    R --> UNI[Universal]
+    EN --> EN1[swear words]
+    EN --> EN2[asdf ugh argh]
+    EN --> EN3[nope broken hate]
+    FR --> FR1[putain merde]
+    FR --> FR2[chiant naze]
+    DE --> DE1[scheisse verdammt]
+    DE --> DE2[mist kacke]
+    ES --> ES1[mierda joder]
+    UNI --> U1[dread punctuation]
+    UNI --> U2[wip fix asdf]
+    UNI --> U3[ALL CAPS RAGE]
+    UNI --> U4[please work last try]
 ```
 
 ---
