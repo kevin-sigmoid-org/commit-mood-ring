@@ -137,27 +137,15 @@ Where:
 
 This is, statistically, **not science**. It is, however, **better than what your $50,000/year vendor is doing**.
 
-```mermaid
-graph TB
-    R([Multilingual corpus])
-    R --> EN[English]
-    R --> FR[Francais]
-    R --> DE[Deutsch]
-    R --> ES[Espanol]
-    R --> UNI[Universal]
-    EN --> EN1[swear words]
-    EN --> EN2[asdf ugh argh]
-    EN --> EN3[nope broken hate]
-    FR --> FR1[putain merde]
-    FR --> FR2[chiant naze]
-    DE --> DE1[scheisse verdammt]
-    DE --> DE2[mist kacke]
-    ES --> ES1[mierda joder]
-    UNI --> U1[dread punctuation]
-    UNI --> U2[wip fix asdf]
-    UNI --> U3[ALL CAPS RAGE]
-    UNI --> U4[please work last try]
-```
+**Multilingual corpus** — what each language contributes to the despair index:
+
+| Language | Patterns scanned |
+|---|---|
+| 🇬🇧 **English** | swear words · `asdf` · `ugh` · `argh` · `nope` · `broken` · `hate` |
+| 🇫🇷 **Français** | `putain` · `merde` · `chiant` · `naze` · `n'importe quoi` |
+| 🇩🇪 **Deutsch** | `scheisse` · `verdammt` · `mist` · `kacke` |
+| 🇪🇸 **Español** | `mierda` · `joder` |
+| 🌐 **Universal** | dread punctuation (`???`, `!!!`, `...`) · `wip` / `fix` / `asdf` · ALL CAPS RAGE · `please work` · `last try` |
 
 ---
 
