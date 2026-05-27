@@ -100,24 +100,24 @@ It reads your `git log`. It applies a corpus of heuristics — swearing, despair
 
 ```mermaid
 flowchart LR
-    A[🗂️ git log --since] --> B[Per-commit parser]
-    B --> C{For each msg, check…}
-    C -->|"wip / fix / asdf"| D[+1 Despair]
-    C -->|"fuck / merde / scheisse"| E[+1 Swear]
-    C -->|"??? / ... / !!!"| F[+1 Dread]
+    A[git log since] --> B[Per-commit parser]
+    B --> C{Check message}
+    C -->|wip fix asdf| D[+1 Despair]
+    C -->|swear words| E[+1 Swear]
+    C -->|dread punctuation| F[+1 Dread]
     C -->|ALL CAPS RAGE| G[+1 Yelling]
-    C -->|Co-authored-by| H[Mood +]
-    D --> I[📊 Score aggregator]
+    C -->|Co-authored-by| H[Mood plus]
+    D --> I[Score aggregator]
     E --> I
     F --> I
     G --> I
     H --> I
-    I --> J{Day-of-week<br/>and hour analysis}
-    J -->|Friday 16-20h| K[+1 Friday-PM decay]
-    J -->|Sunday 22h+| L[+1 cry-for-help]
+    I --> J{Day and hour}
+    J -->|Friday afternoon| K[+1 Friday decay]
+    J -->|Sunday late| L[+1 cry for help]
     K --> M[Terminal dashboard]
     L --> M
-    M --> N[Diagnosis + Recommendations]
+    M --> N[Diagnosis and Recommendations]
 ```
 
 ---
@@ -139,25 +139,26 @@ This is, statistically, **not science**. It is, however, **better than what your
 
 ```mermaid
 mindmap
-  root((🧠 Corpus<br/>multilingue))
+  root((Multilingual corpus))
     English
-      fuck / damn / wtf / shit
-      asdf / ugh / argh
-      nope / broken / hate
-    Français
-      putain / merde
-      chiant / naze
-      n'importe / wtf
+      swear words
+      asdf ugh argh
+      nope broken hate
+    Francais
+      putain merde
+      chiant naze
+      n'importe quoi
     Deutsch
-      scheisse / verdammt
-      mist / kacke / wtf
-    Español
-      mierda / joder / wtf
-    Universal patterns
-      ??? !!! ...
-      wip / fix / asdf
+      scheisse verdammt
+      mist kacke
+    Espanol
+      mierda joder
+    Universal
+      dread punctuation
+      wip fix asdf
       ALL CAPS RAGE
-      please work / last try
+      please work
+      last try
 ```
 
 ---
