@@ -99,7 +99,7 @@ It reads your `git log`. It applies a corpus of heuristics — swearing, despair
 ## 🛠️ How it works
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[git log since] --> B[Per-commit parser]
     B --> C{Check message}
     C -->|wip fix asdf| D[+1 Despair]
