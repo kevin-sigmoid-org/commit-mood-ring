@@ -100,24 +100,24 @@ It reads your `git log`. It applies a corpus of heuristics — swearing, despair
 
 ```mermaid
 flowchart TD
-    A[git log since] --> B[Per-commit parser]
-    B --> C{Check message}
-    C -->|wip fix asdf| D[+1 Despair]
-    C -->|swear words| E[+1 Swear]
-    C -->|dread punctuation| F[+1 Dread]
-    C -->|ALL CAPS RAGE| G[+1 Yelling]
-    C -->|Co-authored-by| H[Mood plus]
-    D --> I[Score aggregator]
+    A["git log --since"] --> B["Per-commit parser"]
+    B --> C{"Check message"}
+    C -->|"wip fix asdf"| D["Despair +1"]
+    C -->|"swear words"| E["Swear +1"]
+    C -->|"dread punctuation"| F["Dread +1"]
+    C -->|"ALL CAPS RAGE"| G["Yelling +1"]
+    C -->|"Co-authored-by"| H["Mood boost"]
+    D --> I["Score aggregator"]
     E --> I
     F --> I
     G --> I
     H --> I
-    I --> J{Day and hour}
-    J -->|Friday afternoon| K[+1 Friday decay]
-    J -->|Sunday late| L[+1 cry for help]
-    K --> M[Terminal dashboard]
+    I --> J{"Day and hour"}
+    J -->|"Friday afternoon"| K["Friday decay +1"]
+    J -->|"Sunday late"| L["Cry for help +1"]
+    K --> M["Terminal dashboard"]
     L --> M
-    M --> N[Diagnosis and Recommendations]
+    M --> N["Diagnosis and Recommendations"]
 ```
 
 ---
